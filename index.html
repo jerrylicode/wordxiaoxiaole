@@ -612,7 +612,7 @@
 
         // DOM 元素
         const elements = {
-            title: document.getElementById('gameTitle'),
+
             pairCount: document.getElementById('pairCount'),
             pairCountValue: document.getElementById('pairCountValue'),
             wordListInput: document.getElementById('wordListInput'),
@@ -632,7 +632,7 @@
             initAudio();
             
             // 事件监听
-            elements.title.addEventListener('click', editTitle);
+
             elements.pairCount.addEventListener('input', updatePairCount);
             elements.startBtn.addEventListener('click', startGame);
             elements.continueBtn.addEventListener('click', continueGame);
@@ -653,13 +653,6 @@
         }
 
         // 编辑标题
-        function editTitle() {
-            const newTitle = prompt('请输入新的标题：', elements.title.textContent);
-            if (newTitle !== null && newTitle.trim() !== '') {
-                elements.title.textContent = newTitle.trim();
-                saveToLocalStorage();
-            }
-        }
 
         // 更新单词对数显示
         function updatePairCount() {
